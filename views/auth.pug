@@ -1,0 +1,13 @@
+html
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title= title
+  body
+    if title == '認証成功'
+      p 認証に成功しました｡
+        a(href="/login") ログイン
+    else
+      p 認証に失敗しました｡もう一度､最初からやり直してください｡
+        a(href="/signup") サインアップ

@@ -1,0 +1,27 @@
+html
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title= title
+  body
+    if title == 'サインアップ'
+      form(action="/signup", method="post")
+        div
+          label
+            p ユーザー名:
+              input(type="text", name="username")
+        div
+          label
+            p メールアドレス:
+              input(type="email", name="email")
+        div
+          label
+            p パスワード:
+              input(type="password", name="password")
+        div
+          button(type="submit") サインアップ
+      p または
+        a(href="/login") ログイン
+    else
+      p アカウント確認メールを送信しました｡メール内のリンクから認証を行っってください｡
